@@ -6,7 +6,7 @@ import numpy as np
 import pandas as pd
 from matplotlib import pyplot as plt
 
-from mathUtils import *
+from Utils.mathUtils import *
 
 class Model(object):
     def __init__(self, name, dataset):

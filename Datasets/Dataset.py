@@ -6,7 +6,7 @@ import numpy as np
 import pandas as pd
 from matplotlib import pyplot as plt
 
-from mathUtils import *
+from Utils import *
 
 class Dataset(object):
     def __init__(self, name, mode):
