@@ -6,7 +6,7 @@ import numpy as np
 import pandas as pd
 from matplotlib import pyplot as plt
 
-from Utils import *
+from Utils.mathUtils import *
 
 class Dataset(object):
     def __init__(self, name, mode):
@@ -22,8 +22,8 @@ class Dataset(object):
 
     def check_mode(self, mode):
         if mode not in ['regression', 'binary', 'select']:
-            print("올바르지 않은 모드값입니다. Error occured in Dataset.check_mode")
-            raise ValueError
+            print("임의의 모드입니다 {} (Dataset.py)".format(mode))
+            return mode
         return mode
 
     @property

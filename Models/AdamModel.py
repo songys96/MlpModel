@@ -1,13 +1,17 @@
 # -*- encoding: utf-8 -*-
+
+import numpy as np
+
 from .MlpModel import MlpModel
+from Utils.mathUtils import relu_derv
 
 class AdamModel(MlpModel):
         
     def __init__(self, name, dataset, hconfigs):
-        super(AdamModel, self).__init__(name, dataset)
+        super(AdamModel, self).__init__(name, dataset, hconfigs)
         self.use_adam = False
 
-    def backprop_layer(self, G_y, hconfigs, pm, aux):
+    def backprop_layer(self, G_y, hconfig, pm, aux):
         x, y = aux
 
         if hconfig is not None: G_y = relu_derv(y) * G_y
