@@ -143,6 +143,7 @@ class Dataset(object):
             entropy = sigmoid_cross_entropy_with_logits(y, output)
             loss = np.mean(entropy)
             aux = [y, output]
+            
         elif mode == 'select':
             entropy = softmax_cross_entropy_with_logits(y, output)
             loss = np.mean(entropy)
